@@ -12,7 +12,7 @@ const WorkoutSelection = ({ handleClick }: WorkoutSelectionProps) => {
   return (
     <div className="p-8 lg:px-30">
       <h2 className="text-center lg:text-3xl text-2xl pb-8">Choose your workout</h2>
-      <div data-testid="workout-selection" className="flex flex-wrap justify-center gap-[20px]">
+      <div data-testid="workout-selection" className="flex flex-wrap justify-center gap-5">
         {workouts && workouts.map((workout, index) => (
           <WorkoutCard
             key={index}
