@@ -8,25 +8,32 @@ import { useState } from "react";
 
 export default function Home() {
 
-  const [startWorkout, setStartWorkout] = useState<boolean>(false)
-  const [activeWorkout, setActiveWorkout] = useState<Workout | null>(null)
+  const [selectedWorkout, setSelectedWorkout] = useState<Workout | null>(null)
+  // const [startWorkout, setStartWorkout] = useState<boolean>(false)
+  // const [activeWorkout, setActiveWorkout] = useState<Workout | null>(null)
 
-  const handleClickStart = (workout: Workout): void => {
-    setStartWorkout(true);
-    setActiveWorkout(workout)
-  }
+  // const handleClickStart = (workout: Workout): void => {
+  //   setStartWorkout(true);
+  //   setActiveWorkout(workout)
+  // }
 
-  const handleClickGoBack = (): void => {
-    setStartWorkout(false);
-    setActiveWorkout(null);
-  };
+  // const handleClickGoBack = (): void => {
+  //   setStartWorkout(false);
+  //   setActiveWorkout(null);
+  // };
 
   return (
     <div>
       <Header />
-      {!startWorkout && <WorkoutSelection handleClick={handleClickStart} />}
+      {/* {!startWorkout && <WorkoutSelection handleClick={handleClickStart} />}
       {startWorkout && activeWorkout && (
         <ActiveWorkout workout={activeWorkout} goBack={handleClickGoBack} />
+      )} */}
+      {!selectedWorkout && (
+        <WorkoutSelection handleClick={(workout => setSelectedWorkout(workout))} />
+      )}
+      {selectedWorkout && (
+        <ActiveWorkout workout={selectedWorkout} goBack={() => setSelectedWorkout(null)} />
       )}
     </div>
   );
