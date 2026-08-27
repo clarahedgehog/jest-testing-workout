@@ -1,10 +1,9 @@
 import { fireEvent, render, screen } from '@testing-library/react'
-import Home from './page'
-
+import Home from '../app/page'
 
 describe("the homepage works ok", () => {
 
-  test("Header an WorkoutSelection is rendered on homepage", () => {
+  test("Header and WorkoutSelection is rendered on homepage", () => {
     render(<Home />)
 
     const header = screen.getByRole("heading", { level: 1, "name": /workout timer/i })

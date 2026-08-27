@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react'
-import ActiveWorkout from '.'
+import ActiveWorkout from '@/components/ActiveWorkout'
 
 describe("The ActiveWorkout works ok", () => {
 
