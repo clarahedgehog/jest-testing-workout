@@ -14,19 +14,19 @@ export const workouts: Workout[] = [
   {
     id: 3,
     name: "Push Ups",
-    workTime: 30,
+    workTime: 10,
   },
   {
     id: 4,
     name: "Jumping Jacks",
     workTime: 30,
-  }, 
-    {
+  },
+  {
     id: 5,
     name: "Deadbug",
     workTime: 60,
-  }, 
-    {
+  },
+  {
     id: 6,
     name: "Plank",
     workTime: 45,
